@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewScript : MonoBehaviour
+public class Jumper : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float jumpPower;
+    public Rigidbody rigid;
+    public bool jumpState;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (jumpState == false)
+            {
+                rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+                jumpState = true;
+            }
+
+
+        }
+
+        if (this.transform.position.y <= 1)
+        {
+            jumpState = false;
+
+        }
     }
 }
