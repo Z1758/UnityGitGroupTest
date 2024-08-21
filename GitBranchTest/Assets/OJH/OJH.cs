@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class OJH : MonoBehaviour
 {
-    string _name;
-    int _age;
+    string _name = "ø¿¡ÿ«ı";
+    int _age = 25;
+
     void Start()
     {
-        Debug.Log("Hi IM OJH");
-        Debug.Log("HI Guys!");
+        Debug.Log($"Hi IM {_name}");
+        Debug.Log($"HI Im{_age}");
     }
 
     // Update is called once per frame
