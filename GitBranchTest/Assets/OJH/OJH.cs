@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class OJH : MonoBehaviour
 {
-    // Start is called before the first frame update
+    string _name;
+    int _age;
     void Start()
     {
         Debug.Log("Hi IM OJH");
